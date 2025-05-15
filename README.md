@@ -11,8 +11,6 @@ The **Zoom Feedback Validator** is a Gradio-based web application that leverages
 
 ## Demo
 
-![App Screenshot](#)
-*Replace this placeholder with a screenshot or GIF of the app interface.*
 
 ---
 
