@@ -1,72 +1,76 @@
-Here's a `README.md` file you can use for your GitHub repository:
-
----
-
 # Zoom Feedback Validator
 
-This Gradio-based web app uses a fine-tuned BERT model to validate whether a feedback comment matches a selected reason. It’s designed for classifying text-reason pairs in feedback data (e.g., Zoom meetings or product reviews).
+The **Zoom Feedback Validator** is a Gradio-based web application that leverages a fine-tuned BERT model to validate whether a feedback comment aligns with a selected reason. This tool is designed for classifying text-reason pairs in feedback data, such as Zoom meeting feedback or product reviews.
 
 ## Features
 
-* Accepts a piece of feedback and a selected reason
-* Uses a fine-tuned BERT classifier to predict if they match
-* Interactive web interface built with **Gradio**
-* Returns "Matched" or "Not Matched" based on model prediction
+- Accepts a feedback comment and a selected reason as input.
+- Utilizes a fine-tuned BERT classifier to determine if the feedback matches the reason.
+- Provides an interactive and user-friendly web interface powered by **Gradio**.
+- Outputs "Matched" or "Not Matched" based on the model's prediction.
 
 ## Demo
 
 ![App Screenshot](#)
-*Insert screenshot or GIF of the app interface here*
+*Replace this placeholder with a screenshot or GIF of the app interface.*
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
+Ensure the following dependencies are installed on your system:
 
-* Python 3.7+
-* PyTorch
-* Hugging Face Transformers
-* Gradio
-* pandas
+- Python 3.7 or higher
+- PyTorch
+- Hugging Face Transformers
+- Gradio
+- pandas
 
 ### Installation
 
-1. **Clone the repository**
+1. **Clone the Repository**
 
-```bash
-git clone https://github.com/your-username/zoom-feedback-validator.git
-cd zoom-feedback-validator
-```
+   Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/zoom-feedback-validator.git
+   cd zoom-feedback-validator
+   ```
 
 2. **Install dependencies**
 
-```bash
-pip install -r requirements.txt
-```
+   Install the required Python packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 3. **Add model and data**
 
-* Place your fine-tuned model in a folder called `feedback_model/` (must be in Hugging Face format).
-* Add the evaluation dataset as `eval.csv` in the project directory.
+   - Place your fine-tuned model in a folder called `feedback_model/` (must be in Hugging Face format).
+   - Add the evaluation dataset as `eval.csv` in the project directory.
 
-  The CSV should follow this format (no header in original file):
+     The CSV should follow this format (no header in original file):
 
-  ```
-  feedback_text,reason,label
-  ```
+     ```
+     feedback_text,reason,label
+     ```
 
 4. **Run the app**
 
-```bash
-python app.py
-```
+   Run the application using the following command:
 
-Or, if it's all in one script:
+   ```bash
+   python app.py
+   ```
 
-```bash
-python your_script_name.py
-```
+   Or, if it's all in one script:
+
+   ```bash
+   python your_script_name.py
+   ```
 
 ## File Structure
 
@@ -84,13 +88,13 @@ zoom-feedback-validator/
 
 Enter:
 
-* **Feedback Text:** "The breakout rooms were very helpful."
-* **Reason:** "Breakout Rooms"
+- **Feedback Text:** "The breakout rooms were very helpful."
+- **Reason:** "Breakout Rooms"
 
 The app will return:
 
-* **"Matched"** if the model thinks the reason fits the feedback.
-* **"Not Matched"** otherwise.
+- **"Matched"** if the model thinks the reason fits the feedback.
+- **"Not Matched"** otherwise.
 
 ## License
 
@@ -98,9 +102,9 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-* Model fine-tuned using Hugging Face Transformers
-* Interface built with Gradio
-* Data format based on Zoom feedback use case
+- Model fine-tuned using Hugging Face Transformers
+- Interface built with Gradio
+- Data format based on Zoom feedback use case
 
 ---
 
